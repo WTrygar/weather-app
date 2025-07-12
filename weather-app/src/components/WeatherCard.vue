@@ -6,8 +6,12 @@ import WeatherInfo from './WeatherInfo.vue'
 defineProps({
   place: Object,
 })
-
+const emit = defineEmits(['delete-place'])
 const showDetail = ref(false)
+const removePlace = (placeName) => {
+  emit('delete-place', placeName)
+  showDetail.value = false
+}
 </script>
 
 <template>
@@ -44,7 +48,11 @@ const showDetail = ref(false)
 
     <!-- info -->
     <div v-show="showDetail">
-      <WeatherInfo :place="place" @close-info="showDetail = false" />
+      <WeatherInfo
+        :place="place"
+        @close-info="showDetail = false"
+        @remove-place="removePlace(place.location.name)"
+      />
     </div>
 
     <!-- forecast button -->
