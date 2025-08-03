@@ -1,6 +1,13 @@
 # weather-app
 
-This template should help get you started developing with Vue 3 in Vite.
+Weather application made with Vue, Tailwind and Free Weather API.
+
+<img width="900" height="855" alt="image" src="https://github.com/user-attachments/assets/b0aac79d-7e8d-471c-b1cf-bc2ad30fe417" />
+
+## ideas for future:
+
+- dark mode,
+- change icons
 
 ## Recommended IDE Setup
 
